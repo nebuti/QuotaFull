@@ -176,17 +176,21 @@ class IntroScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Kadesh'),
-        centerTitle: true,
-      ),
+            appBar: AppBar(
+            backgroundColor: Color.fromARGB(255, 79, 230, 9),
+            title: Container(
+            
+              child: Column(
+                ),
+
+            )),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(12, 80, 12, 12),
         child: IntroductionScreen(
           pages: pages,
           dotsDecorator: const DotsDecorator(
             size: Size(15, 15),
-            color: Colors.blue,
+          
             activeSize: Size.square(20),
             activeColor: Colors.red,
           ),

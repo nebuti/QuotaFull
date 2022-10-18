@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class GridSearchScreen extends StatefulWidget {
+class carSearchScreen extends StatefulWidget {
   @override
-  _GridSearchScreenState createState() => _GridSearchScreenState();
+  _carSearchScreenState createState() => _carSearchScreenState();
 }
 
-class _GridSearchScreenState extends State<GridSearchScreen> {
-  List<String> allList = [
+class _carSearchScreenState extends State<carSearchScreen> {
+  List<String> foodList = [
     'Orange',
     'Berries',
     'Lemons',
@@ -41,7 +41,7 @@ class _GridSearchScreenState extends State<GridSearchScreen> {
     'Leafy greens',
     'Meat',
   ];
-  List<String>? allListSearch;
+  List<String>? foodListSearch;
   final FocusNode _textFocusNode = FocusNode();
   TextEditingController? _textEditingController = TextEditingController();
   @override
@@ -74,13 +74,13 @@ class _GridSearchScreenState extends State<GridSearchScreen> {
                     contentPadding: EdgeInsets.all(8)),
                 onChanged: (value) {
                   setState(() {
-                    allListSearch = allList
+                    foodListSearch = foodList
                         .where(
                             (element) => element.contains(value.toLowerCase()))
                         .toList();
                     if (_textEditingController!.text.isNotEmpty &&
-                        allListSearch!.length == 0) {
-                      print('foodListSearch length ${allListSearch!.length}');
+                        foodListSearch!.length == 0) {
+                      print('foodListSearch length ${foodListSearch!.length}');
                     }
                   });
                 },
@@ -91,7 +91,7 @@ class _GridSearchScreenState extends State<GridSearchScreen> {
 
             
         body: _textEditingController!.text.isNotEmpty &&
-                allListSearch!.length == 0
+                foodListSearch!.length == 0
             ? Center(
                 child: Padding(
                   padding: const EdgeInsets.all(18.0),
@@ -123,8 +123,8 @@ class _GridSearchScreenState extends State<GridSearchScreen> {
                   crossAxisSpacing: 12,
                 ),
                 itemCount: _textEditingController!.text.isNotEmpty
-                    ? allListSearch!.length
-                    : allList.length,
+                    ? foodListSearch!.length
+                    : foodList.length,
                 itemBuilder: (ctx, index) {
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -137,8 +137,8 @@ class _GridSearchScreenState extends State<GridSearchScreen> {
                           width: 10,
                         ),
                         Text(_textEditingController!.text.isNotEmpty
-                            ? allListSearch![index]
-                            : allList[index]),
+                            ? foodListSearch![index]
+                            : foodList[index]),
                       ],
                     ),
                   );
