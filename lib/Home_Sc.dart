@@ -29,20 +29,15 @@ class Home_ScState extends State<Home_Sc> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    
-      body: Container(
-        height: double.infinity,
-
-        color: Color.fromARGB(255, 238, 232, 211),
-
+        body: Container(
+          color: Color.fromARGB(255, 238, 232, 211),
         width: double.infinity,
         padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
         margin: EdgeInsets.all(5.0),
-        // margin: const EdgeInsets.only(top: 10.0),
-        child: ListView(children: [
+        // margin: const EdgeInsets.only(top: 10.sta0),
+        child: Column(children: [     
           Row
           (  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            
                 children: [
                            ElevatedButton.icon(
                            
@@ -95,19 +90,17 @@ class Home_ScState extends State<Home_Sc> {
               child: ClipOval(
                 child: Image.asset(
                   "assets/images/broker.png",
-                  height: 200,
                   width: 200,
                 ),
               )),
           CarouselSlider(
             options: CarouselOptions(
-              height: 200.0,
+              height: 100.0,
               viewportFraction: 0.98,
               enlargeCenterPage: false,
               enlargeStrategy: CenterPageEnlargeStrategy.height,
-              autoPlay: true,
-              
-              onPageChanged: (index, reason) {
+              autoPlay: true,  
+               onPageChanged: (index, reason) {
                 print(reason);
                 // print(CarouselPageChangedReason.controller);
               },
@@ -130,7 +123,7 @@ class Home_ScState extends State<Home_Sc> {
             child: Container(
                 margin: EdgeInsets.only(right: 5, bottom: 0.5),
                 width: double.infinity,
-                color: Color.fromARGB(255, 171, 252, 105),
+                color: Color.fromARGB(255, 97, 201, 12),
                 child: Image.asset('assets/images/nav.png', fit: BoxFit.cover),
                 alignment: Alignment.bottomRight),
           ),

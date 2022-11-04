@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:anim_search_bar/anim_search_bar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -86,137 +88,157 @@ class _carState extends State<car> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: ListView(
-            // color: Color.fromARGB(193, 255, 252, 252),
-            // padding: const EdgeInsets.only(top: 58.0, right: 10, left: 10),
-            children: [
-          Container(
-              height: 200,
-              width: 500,
-              color: Color.fromARGB(255, 163, 213, 214),
-              child: Column(children: [
-                // ignore: prefer_const_constructors
-                Text(
-                  "wellcome to car station",
-                  // ignore: prefer_const_constructors
-                  style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 0, 0, 0)),
-                ),
-                // ignore: prefer_const_constructors
-                SizedBox(
-                  height: 40,
-                ),
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Column(
-                    children: [
-                      ElevatedButton.icon(
-                        style: ElevatedButton.styleFrom(
-                          shape: new RoundedRectangleBorder(
-                            borderRadius: new BorderRadius.circular(100.0),
+        body: Container(
+            color: Color.fromARGB(255, 98, 255, 158),
+            height: double.infinity,
+            child: Column(children: [
+              Container(
+                  color: Color.fromARGB(255, 163, 213, 214),
+                  child: Column(children: [
+                    // ignore: prefer_const_constructors
+                    Text(
+                      "wellcome to car station",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 0, 0, 0)),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      child: Column(
+                        children: [
+                          ElevatedButton.icon(
+                            style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(100.0),
+                              ),
+                            ),
+                            icon: Icon(
+                              Icons.search_rounded,
+                              size: 30.0,
+                            ), //icon data for elevated button
+                            label: Text(
+                              "search cars ....",
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color.fromARGB(255, 248, 248, 248)),
+                            ),
+                            onPressed: () {
+                              Navigator.of(context).push(_createRoute());
+                              //After successful login we will redirect to profile page. Let's create profile page now
+                            },
                           ),
-                        ),
-
-                        icon: Icon(
-                          Icons.search_rounded,
-                          size: 30.0,
-                        ), //icon data for elevated button
-                        label: Text(
-                          "search cars ....",
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: Color.fromARGB(255, 248, 248, 248)),
-                        ),
-                        onPressed: () {
-                          Navigator.of(context).push(_createRoute());
-                          //After successful login we will redirect to profile page. Let's create profile page now
-                        },
+                        ],
                       ),
-                    ],
-                  ),
-                )
-              ])),
-          SizedBox(
-            height: 0.5,
-          ),
-          Container(
-              color: Color.fromARGB(195, 168, 245, 180),
-              height: 100,
-              child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    shape: new RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(20.0),
                     ),
-                  ),
-                  // style: ThemeHelper().buttonStyle(),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      height: 200,
+                      width: double.infinity,
+                      child: Image.asset(
+                        "images/p.gif",
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ])),
+              Container(
+                  color: Color.fromARGB(195, 168, 245, 180),
+                  height: 30,
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0),
+                            ),
+                          ), // style: ThemeHelper().buttonStyle(),
 
-                  child: Text(
-                    'Sell  ',
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(255, 248, 248, 248)),
-                  ),
+                          child: Text(
+                            'Sell  ',
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                color: Color.fromARGB(255, 248, 248, 248)),
+                          ),
 
-                  onPressed: () {
-                    Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context) => sellCar()));
-                    //After successful login we will redirect to profile page. Let's create profile page now
+                          onPressed: () {
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => sellCar()));
+                            //After successful login we will redirect to profile page. Let's create profile page now
+                          },
+                        ),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0),
+                            ),
+                          ),
+                          // style: ThemeHelper().buttonStyle(),
+
+                          child: Text(
+                            'Rent  ',
+                            style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                color: Color.fromARGB(255, 248, 248, 248)),
+                          ),
+
+                          onPressed: () {
+                            Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => carRent()));
+                            //After successful login we will redirect to profile page. Let's create profile page now
+                          },
+                        ),
+                      ])),
+              SizedBox(
+                height: 5,
+              ),
+                 Container( 
+                      child:  Text("Hello Everyone! This is car Campus",
+                                
+                             style: TextStyle(fontSize: 18, color: Colors.white),
+                     ),
+                        width: double.infinity,
+                       color: Color.fromARGB(255, 95, 97, 95)
+                        .withOpacity(0.5),
+                        margin: EdgeInsets.all(20),
+                        padding: EdgeInsets.all(40),
+                        ),
+              CarouselSlider(
+                options: CarouselOptions(
+                  height: 100.0,
+                  viewportFraction: 0.98,
+                  enlargeCenterPage: false,
+                  enlargeStrategy: CenterPageEnlargeStrategy.height,
+                  autoPlay: true,
+                  onPageChanged: (index, reason) {
+                    print(reason);
+                    // print(CarouselPageChangedReason.controller);
                   },
                 ),
-               
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    shape: new RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(20.0),
-                    ),
-                  ),
-                  // style: ThemeHelper().buttonStyle(),
-
-                  child: Text(
-                    'Rent  ',
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(255, 248, 248, 248)),
-                  ),
-
-                  onPressed: () {
-                    Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context) => carRent()));
-                    //After successful login we will redirect to profile page. Let's create profile page now
-                  },
-                ),
-              ])),
-          SizedBox(height: 0.5),
-          CarouselSlider(
-            options: CarouselOptions(
-              height: 200.0,
-              viewportFraction: 0.98,
-              enlargeCenterPage: false,
-              enlargeStrategy: CenterPageEnlargeStrategy.height,
-              autoPlay: true,
-              onPageChanged: (index, reason) {
-                print(reason);
-                // print(CarouselPageChangedReason.controller);
-              },
-            ),
-            items: imagelist.map((i) {
-              return Builder(builder: (context) {
-                return AnimatedContainer(
-                  duration: const Duration(milliseconds: 200),
-                  curve: Curves.easeInOutBack,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage(i), fit: BoxFit.cover)),
-                );
-              });
-            }).toList(),
-          ),
-        ]));
+                items: imagelist.map((i) {
+                  return Builder(builder: (context) {
+                    return AnimatedContainer(
+                      duration: const Duration(milliseconds: 200),
+                      curve: Curves.easeInOutBack,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage(i), fit: BoxFit.cover)),
+                    );
+                  });
+                }).toList(),
+              ),
+            
+            ])));
   }
 }

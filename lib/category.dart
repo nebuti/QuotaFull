@@ -9,9 +9,9 @@ class category extends StatefulWidget {
 }
 
 List<String> images = [
-  'assets/images/c4.png',
-  'assets/images/h20.png',
-  'assets/images/h5.png',
+  'assets/images/cs1.png',
+  'assets/images/cs2.png',
+  'assets/images/cs3.png',
 ];
 
 class _categoryState extends State<category> {
@@ -27,19 +27,26 @@ class _categoryState extends State<category> {
             child: slide(),
           ),
           Text(
-            'Sell car category  ',
+            'Sell Car Category  ',
             style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
                 color: Color.fromARGB(255, 14, 13, 13)),
           ),
-          PopularFoodTitle(),
+          PopularcarTitle(),
           Expanded(
-            child: PopularFoodItems(),
+            child: PopularcarItems(),
           ),
-          PopularFoodTitle(),
+          Text(
+            'Sell House Category  ',
+            style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Color.fromARGB(255, 14, 13, 13)),
+          ),
+          PopularhouseTitle(),
           Expanded(
-            child: PopularFoodItems(),
+            child: PopularhouseItems(),
           ),
         ],
       ),
@@ -51,12 +58,6 @@ class slide extends StatefulWidget {
   @override
   _slideState createState() => _slideState();
 }
-
-List<String> imagess = [
-  'assets/images/c4.png',
-  'assets/images/h20.png',
-  'assets/images/h5.png',
-];
 
 class _slideState extends State<slide> {
   @override
@@ -109,20 +110,17 @@ class catego extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-       appBar: AppBar(
-            backgroundColor: Color.fromARGB(255, 79, 230, 9),
-            title: Container(
-            
-              child: Column(
-                ),
-
-            )),
-            body: category(),
+      appBar: AppBar(
+          backgroundColor: Color.fromARGB(255, 79, 230, 9),
+          title: Container(
+            child: Column(),
+          )),
+      body: category(),
     );
   }
 }
 
-class PopularFoodTiles extends StatelessWidget {
+class PopularcarTiles extends StatelessWidget {
   String name;
   String imageUrl;
   String rating;
@@ -130,7 +128,324 @@ class PopularFoodTiles extends StatelessWidget {
   String price;
   String slug;
 
-  PopularFoodTiles(
+  PopularcarTiles(
+      {Key? key,
+      required this.name,
+      required this.imageUrl,
+      required this.rating,
+      required this.numberOfRating,
+      required this.price,
+      required this.slug})
+      : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) {
+            return car_detail();
+          }),
+        );
+      },
+        child: Column(
+        children: <Widget>[
+          Container(
+            padding: EdgeInsets.only(left: 10, right: 5, top: 5, bottom: 5),
+            // ignore: prefer_const_literals_to_create_immutables
+            decoration: BoxDecoration(boxShadow: [
+              BoxShadow(
+                color: Color.fromARGB(255, 255, 255, 255),
+                blurRadius: 15.0,
+                offset: Offset(0, 0.75),
+              ),
+            ]),
+            child: Card(
+                color: Color.fromARGB(255, 104, 209, 127),
+                elevation: 0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: const BorderRadius.all(
+                    Radius.circular(5.0),
+                  ),
+                ),
+                child: Container(
+                  width: 160,
+                  height: 150,
+                  child: Column(
+                    children: <Widget>[
+                      Stack(
+                        children: <Widget>[
+                          // Align(
+                          //   alignment: Alignment.topRight,
+                          //   child: Container(
+                          //     alignment: Alignment.topRight,
+                          //     width: double.infinity,
+                          //     padding: EdgeInsets.only(right: 5, top: 5),
+                          //     // child: Container(
+                          //     //   height: 28,
+                          //     //   width: 28,
+                          //     //   decoration: BoxDecoration(
+                          //     //       shape: BoxShape.circle,
+                          //     //       color: Color.fromARGB(253, 121, 118, 118),
+                          //     //       // ignore: prefer_const_literals_to_create_immutables
+                          //     //       boxShadow: [
+                          //     //         BoxShadow(
+                          //     //           color: Color.fromARGB(255, 213, 241, 148),
+                          //     //           blurRadius: 25.0,
+                          //     //           offset: Offset(0.0, 0.75),
+                          //     //         ),
+                          //     //       ]),
+                          //     //   // child: Icon(
+                          //     //   //   Icons.favorite,
+                          //     //   //   color: Color.fromARGB(255, 8, 8, 8),
+                          //     //   //   size: 16,
+                          //     //   // ),
+                          //     // ),
+                          //   ),
+                          // ),
+                          Align(
+                            alignment: Alignment.centerLeft,
+                            child: Center(
+                                child: Image.asset(
+                              // ignore: prefer_interpolation_to_compose_strings
+                              'assets/images/' + imageUrl + ".png",
+                              width: 160,
+                              height: 100,
+                              fit: BoxFit.cover,
+                            )),
+                          )
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Container(
+                            alignment: Alignment.bottomLeft,
+                            padding: EdgeInsets.only(left: 5, top: 5),
+                            child: Text(name,
+                                style: TextStyle(
+                                    color: Color.fromARGB(255, 3, 3, 3),
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w500)),
+                          ),
+                          Container(
+                            alignment: Alignment.topRight,
+                            padding: EdgeInsets.only(right: 5),
+                            child: Container(
+                              height: 15,
+                              width: 15,
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Color.fromARGB(179, 144, 156, 146),
+                                  // ignore: prefer_const_literals_to_create_immutables
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Color.fromARGB(255, 255, 255, 255),
+                                      blurRadius: 25.0,
+                                      offset: Offset(0.0, 0.75),
+                                    ),
+                                  ]),
+                              child: Icon(
+                                Icons.near_me,
+                                color: Color.fromARGB(255, 13, 14, 13),
+                                size: 10,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: <Widget>[
+                              Container(
+                                alignment: Alignment.topLeft,
+                                padding: EdgeInsets.only(left: 5, top: 5),
+                                child: Text(rating,
+                                    style: TextStyle(
+                                        color: Color.fromARGB(255, 0, 0, 0),
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.w400)),
+                              ),
+                              Container(
+                                padding: EdgeInsets.only(top: 3, left: 5),
+                                child: Row(
+                                  // ignore: prefer_const_literals_to_create_immutables
+                                  children: <Widget>[
+                                    Icon(
+                                      Icons.star,
+                                      size: 8,
+                                      color: Color.fromARGB(255, 12, 12, 12),
+                                    ),
+                                    Icon(
+                                      Icons.star,
+                                      size: 8,
+                                      color: Color.fromARGB(255, 10, 10, 10),
+                                    ),
+                                    Icon(
+                                      Icons.star,
+                                      size: 8,
+                                      color: Color.fromARGB(255, 13, 14, 13),
+                                    ),
+                                    Icon(
+                                      Icons.star,
+                                      size: 8,
+                                      color: Color.fromARGB(255, 22, 22, 22),
+                                    ),
+                                    Icon(
+                                      Icons.star,
+                                      size: 8,
+                                      color: Color.fromARGB(255, 206, 206, 207),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                alignment: Alignment.topLeft,
+                                padding: EdgeInsets.only(left: 5, top: 5),
+                                child: Text("($numberOfRating)",
+                                    style: TextStyle(
+                                        color: Color.fromARGB(255, 0, 0, 0),
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.w400)),
+                              ),
+                            ],
+                          ),
+                          Container(
+                            alignment: Alignment.bottomLeft,
+                            padding: EdgeInsets.only(left: 5, top: 5, right: 5),
+                            child: Text('\birr' + price,
+                                style: TextStyle(
+                                    color: Color.fromARGB(255, 2, 2, 2),
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w600)),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                )),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class PopularcarTitle extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.only(left: 10, right: 10, top: 5, bottom: 5),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // ignore: prefer_const_literals_to_create_immutables
+        children: <Widget>[
+          Text(
+            "Popluar car",
+            style: TextStyle(
+                fontSize: 20,
+                color: Color(0xFF3a3a3b),
+                fontWeight: FontWeight.w300),
+          ),
+          Text(
+            "See all",
+            style: TextStyle(
+                fontSize: 16,
+                color: Color.fromARGB(255, 36, 61, 21),
+                fontWeight: FontWeight.w100),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class PopularcarItems extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      scrollDirection: Axis.horizontal,
+      children: <Widget>[
+        PopularcarTiles(
+            name: "Fried Egg",
+            imageUrl: "c7",
+            rating: '4.9',
+            numberOfRating: '200',
+            price: '15.06',
+            slug: "fried_egg"),
+        PopularcarTiles(
+            name: "Mixed Vegetable",
+            imageUrl: "c2",
+            rating: "4.9",
+            numberOfRating: "100",
+            price: "17.03",
+            slug: ""),
+        PopularcarTiles(
+            name: "Salad With Chicken",
+            imageUrl: "c3",
+            rating: "4.0",
+            numberOfRating: "50",
+            price: "11.00",
+            slug: ""),
+        PopularcarTiles(
+            name: "Mixed Salad",
+            imageUrl: "c4",
+            rating: "4.00",
+            numberOfRating: "100",
+            price: "11.10",
+            slug: ""),
+        PopularcarTiles(
+            name: "Red meat,Salad",
+            imageUrl: "c5",
+            rating: "4.6",
+            numberOfRating: "150",
+            price: "12.00",
+            slug: ""),
+        PopularcarTiles(
+            name: "Mixed Salad",
+            imageUrl: "c6",
+            rating: "4.00",
+            numberOfRating: "100",
+            price: "11.10",
+            slug: ""),
+        PopularcarTiles(
+            name: "Potato,Meat fry",
+            imageUrl: "c8",
+            rating: "4.2",
+            numberOfRating: "70",
+            price: "23.0",
+            slug: ""),
+        PopularcarTiles(
+            name: "Fried Egg",
+            imageUrl: "c11",
+            rating: '4.9',
+            numberOfRating: '200',
+            price: '15.06',
+            slug: "fried_egg"),
+        PopularcarTiles(
+            name: "Red meat,Salad",
+            imageUrl: "c10",
+            rating: "4.6",
+            numberOfRating: "150",
+            price: "12.00",
+            slug: ""),
+      ],
+    );
+  }
+}
+
+class PopularhouseTiles extends StatelessWidget {
+  String name;
+  String imageUrl;
+  String rating;
+  String numberOfRating;
+  String price;
+  String slug;
+
+  PopularhouseTiles(
       {Key? key,
       required this.name,
       required this.imageUrl,
@@ -157,13 +472,13 @@ class PopularFoodTiles extends StatelessWidget {
             // ignore: prefer_const_literals_to_create_immutables
             decoration: BoxDecoration(boxShadow: [
               BoxShadow(
-                color: Color(0xFFfae3e2),
+                color: Color.fromARGB(255, 255, 255, 255),
                 blurRadius: 15.0,
                 offset: Offset(0, 0.75),
               ),
             ]),
             child: Card(
-                color: Colors.white,
+                color: Color.fromARGB(255, 104, 209, 127),
                 elevation: 0,
                 shape: RoundedRectangleBorder(
                   borderRadius: const BorderRadius.all(
@@ -172,47 +487,48 @@ class PopularFoodTiles extends StatelessWidget {
                 ),
                 child: Container(
                   width: 160,
-                  height: 100,
+                  height: 150,
                   child: Column(
                     children: <Widget>[
                       Stack(
                         children: <Widget>[
-                          Align(
-                            alignment: Alignment.topRight,
-                            child: Container(
-                              alignment: Alignment.topRight,
-                              width: double.infinity,
-                              padding: EdgeInsets.only(right: 5, top: 5),
-                              child: Container(
-                                height: 28,
-                                width: 28,
-                                decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: Colors.white70,
-                                    // ignore: prefer_const_literals_to_create_immutables
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: Color(0xFFfae3e2),
-                                        blurRadius: 25.0,
-                                        offset: Offset(0.0, 0.75),
-                                      ),
-                                    ]),
-                                child: Icon(
-                                  Icons.favorite,
-                                  color: Color.fromARGB(255, 56, 251, 49),
-                                  size: 16,
-                                ),
-                              ),
-                            ),
-                          ),
+                          // Align(
+                          //   alignment: Alignment.topRight,
+                          //   child: Container(
+                          //     alignment: Alignment.topRight,
+                          //     width: double.infinity,
+                          //     padding: EdgeInsets.only(right: 5, top: 5),
+                          //     // child: Container(
+                          //     //   height: 28,
+                          //     //   width: 28,
+                          //     //   decoration: BoxDecoration(
+                          //     //       shape: BoxShape.circle,
+                          //     //       color: Color.fromARGB(253, 121, 118, 118),
+                          //     //       // ignore: prefer_const_literals_to_create_immutables
+                          //     //       boxShadow: [
+                          //     //         BoxShadow(
+                          //     //           color: Color.fromARGB(255, 213, 241, 148),
+                          //     //           blurRadius: 25.0,
+                          //     //           offset: Offset(0.0, 0.75),
+                          //     //         ),
+                          //     //       ]),
+                          //     //   // child: Icon(
+                          //     //   //   Icons.favorite,
+                          //     //   //   color: Color.fromARGB(255, 8, 8, 8),
+                          //     //   //   size: 16,
+                          //     //   // ),
+                          //     // ),
+                          //   ),
+                          // ),
                           Align(
                             alignment: Alignment.centerLeft,
                             child: Center(
                                 child: Image.asset(
                               // ignore: prefer_interpolation_to_compose_strings
-                              'assets/images/c2.png/' + imageUrl + ".png",
-                              width: 60,
-                              height: 70,
+                              'assets/images/' + imageUrl + ".png",
+                              width: 160,
+                              height: 100,
+                              fit: BoxFit.cover,
                             )),
                           )
                         ],
@@ -225,7 +541,7 @@ class PopularFoodTiles extends StatelessWidget {
                             padding: EdgeInsets.only(left: 5, top: 5),
                             child: Text(name,
                                 style: TextStyle(
-                                    color: Color.fromARGB(255, 56, 251, 49),
+                                    color: Color.fromARGB(255, 3, 3, 3),
                                     fontSize: 15,
                                     fontWeight: FontWeight.w500)),
                           ),
@@ -237,18 +553,18 @@ class PopularFoodTiles extends StatelessWidget {
                               width: 15,
                               decoration: BoxDecoration(
                                   shape: BoxShape.circle,
-                                  color: Colors.white70,
+                                  color: Color.fromARGB(179, 144, 156, 146),
                                   // ignore: prefer_const_literals_to_create_immutables
                                   boxShadow: [
                                     BoxShadow(
-                                      color: Color(0xFFfae3e2),
+                                      color: Color.fromARGB(255, 255, 255, 255),
                                       blurRadius: 25.0,
                                       offset: Offset(0.0, 0.75),
                                     ),
                                   ]),
                               child: Icon(
                                 Icons.near_me,
-                                color: Color.fromARGB(255, 56, 251, 49),
+                                color: Color.fromARGB(255, 13, 14, 13),
                                 size: 10,
                               ),
                             ),
@@ -266,7 +582,7 @@ class PopularFoodTiles extends StatelessWidget {
                                 padding: EdgeInsets.only(left: 5, top: 5),
                                 child: Text(rating,
                                     style: TextStyle(
-                                        color: Color(0xFF6e6e71),
+                                        color: Color.fromARGB(255, 0, 0, 0),
                                         fontSize: 10,
                                         fontWeight: FontWeight.w400)),
                               ),
@@ -278,27 +594,27 @@ class PopularFoodTiles extends StatelessWidget {
                                     Icon(
                                       Icons.star,
                                       size: 8,
-                                      color: Color.fromARGB(255, 56, 251, 49),
+                                      color: Color.fromARGB(255, 12, 12, 12),
                                     ),
                                     Icon(
                                       Icons.star,
                                       size: 8,
-                                      color: Color.fromARGB(255, 56, 251, 49),
+                                      color: Color.fromARGB(255, 10, 10, 10),
                                     ),
                                     Icon(
                                       Icons.star,
                                       size: 8,
-                                      color: Color.fromARGB(255, 56, 251, 49),
+                                      color: Color.fromARGB(255, 13, 14, 13),
                                     ),
                                     Icon(
                                       Icons.star,
                                       size: 8,
-                                      color: Color.fromARGB(255, 56, 251, 499),
+                                      color: Color.fromARGB(255, 22, 22, 22),
                                     ),
                                     Icon(
                                       Icons.star,
                                       size: 8,
-                                      color: Color(0xFF9b9b9c),
+                                      color: Color.fromARGB(255, 206, 206, 207),
                                     ),
                                   ],
                                 ),
@@ -308,7 +624,7 @@ class PopularFoodTiles extends StatelessWidget {
                                 padding: EdgeInsets.only(left: 5, top: 5),
                                 child: Text("($numberOfRating)",
                                     style: TextStyle(
-                                        color: Color(0xFF6e6e71),
+                                        color: Color.fromARGB(255, 0, 0, 0),
                                         fontSize: 10,
                                         fontWeight: FontWeight.w400)),
                               ),
@@ -317,9 +633,9 @@ class PopularFoodTiles extends StatelessWidget {
                           Container(
                             alignment: Alignment.bottomLeft,
                             padding: EdgeInsets.only(left: 5, top: 5, right: 5),
-                            child: Text('\$' + price,
+                            child: Text('\birr' + price,
                                 style: TextStyle(
-                                    color: Color(0xFF6e6e71),
+                                    color: Color.fromARGB(255, 2, 2, 2),
                                     fontSize: 12,
                                     fontWeight: FontWeight.w600)),
                           )
@@ -335,7 +651,7 @@ class PopularFoodTiles extends StatelessWidget {
   }
 }
 
-class PopularFoodTitle extends StatelessWidget {
+class PopularhouseTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -345,7 +661,7 @@ class PopularFoodTitle extends StatelessWidget {
         // ignore: prefer_const_literals_to_create_immutables
         children: <Widget>[
           Text(
-            "Popluar Foods",
+            "Popluar place",
             style: TextStyle(
                 fontSize: 20,
                 color: Color(0xFF3a3a3b),
@@ -364,71 +680,71 @@ class PopularFoodTitle extends StatelessWidget {
   }
 }
 
-class PopularFoodItems extends StatelessWidget {
+class PopularhouseItems extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
       scrollDirection: Axis.horizontal,
       children: <Widget>[
-        PopularFoodTiles(
+        PopularhouseTiles(
             name: "Fried Egg",
-            imageUrl: "ic_popular_food_1",
+            imageUrl: "h1",
             rating: '4.9',
             numberOfRating: '200',
             price: '15.06',
             slug: "fried_egg"),
-        PopularFoodTiles(
+        PopularhouseTiles(
             name: "Mixed Vegetable",
-            imageUrl: "ic_popular_food_3",
+            imageUrl: "h12",
             rating: "4.9",
             numberOfRating: "100",
             price: "17.03",
             slug: ""),
-        PopularFoodTiles(
+        PopularhouseTiles(
             name: "Salad With Chicken",
-            imageUrl: "ic_popular_food_4",
+            imageUrl: "h10",
             rating: "4.0",
             numberOfRating: "50",
             price: "11.00",
             slug: ""),
-        PopularFoodTiles(
+        PopularhouseTiles(
             name: "Mixed Salad",
-            imageUrl: "ic_popular_food_5",
+            imageUrl: "h7",
             rating: "4.00",
             numberOfRating: "100",
             price: "11.10",
             slug: ""),
-        PopularFoodTiles(
+        PopularhouseTiles(
             name: "Red meat,Salad",
-            imageUrl: "ic_popular_food_2",
+            imageUrl: "h6",
             rating: "4.6",
             numberOfRating: "150",
             price: "12.00",
             slug: ""),
-        PopularFoodTiles(
+        PopularhouseTiles(
             name: "Mixed Salad",
-            imageUrl: "ic_popular_food_5",
+            imageUrl: "h11",
             rating: "4.00",
             numberOfRating: "100",
             price: "11.10",
             slug: ""),
-        PopularFoodTiles(
+        PopularhouseTiles(
             name: "Potato,Meat fry",
-            imageUrl: "ic_popular_food_6",
+            imageUrl: "h7",
             rating: "4.2",
             numberOfRating: "70",
             price: "23.0",
             slug: ""),
-        PopularFoodTiles(
+        PopularhouseTiles(
             name: "Fried Egg",
-            imageUrl: "ic_popular_food_1",
+            imageUrl: "h8",
             rating: '4.9',
             numberOfRating: '200',
             price: '15.06',
             slug: "fried_egg"),
-        PopularFoodTiles(
+        PopularhouseTiles(
             name: "Red meat,Salad",
-            imageUrl: "ic_popular_food_2",
+            imageUrl: "h9",
             rating: "4.6",
             numberOfRating: "150",
             price: "12.00",

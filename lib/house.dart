@@ -8,6 +8,7 @@ import 'package:mouse/grid_search.dart';
 import 'package:mouse/buyCar.dart';
 import 'package:mouse/carRent.dart';
 import 'package:mouse/sellHouse.dart';
+import 'package:drop_shadow_image/drop_shadow_image.dart';
 
 class house extends StatefulWidget {
   @override
@@ -51,9 +52,9 @@ class _houseState extends State<house> {
     'Meat',
   ];
   final List<String> imagelist = [
-    'assets/images/c4.png',
-    'assets/images/h20.png',
-    'assets/images/h5.png',
+    'assets/images/h0.png',
+    'assets/images/h2.png',
+    'assets/images/h15.png',
   ];
   List<String>? carListSearch;
   final FocusNode _textFocusNode = FocusNode();
@@ -88,7 +89,9 @@ class _houseState extends State<house> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Align(
+        body: Container(
+          color: Color.fromARGB(255, 132, 227, 161),
+          height: double.infinity,
           child: Column(
           children: [
               Container(
@@ -103,20 +106,9 @@ class _houseState extends State<house> {
                           color: Color.fromARGB(255, 0, 0, 0)),
                     ),
                     SizedBox(
-                      height: 20,
+                      height: 10,
                     ),
-              Container(
-                height: 200,
-                width: double.infinity,
-                child:Image.asset(
-                 "images/p2.gif",
-                          fit: BoxFit.cover,      
-                         
-                            ),),
-
-                      
-                            
-                  Container(
+                    Container(
                       child: Column(
                         children: [
                           ElevatedButton.icon(
@@ -125,13 +117,12 @@ class _houseState extends State<house> {
                                 borderRadius: BorderRadius.circular(100.0),
                               ),
                             ),
-
                             icon: Icon(
                               Icons.search_rounded,
                               size: 30.0,
                             ), //icon data for elevated button
                             label: Text(
-                              "search cars ....",
+                              "search house ....",
                               style: TextStyle(
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold,
@@ -144,12 +135,27 @@ class _houseState extends State<house> {
                           ),
                         ],
                       ),
-                    )
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+              Container(
+                height: 200,
+                width: double.infinity,
+                child:Image.asset(
+                 "images/p2.gif",
+                          fit: BoxFit.cover,      
+                         
+                            ),),
+
+                      
+                            
+                  
                   ])),
                   
               Container(
                   color: Color.fromARGB(195, 168, 245, 180),
-                  height: 100,
+                  height: 30,
 
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -203,7 +209,17 @@ class _houseState extends State<house> {
                           },
                         ),
                       ])),
-
+                           SizedBox( height: 5,),
+               Container( 
+                     
+                      child:  Text("Hello Everyone! This is house Campus",
+                             style: TextStyle(fontSize: 18, color: Colors.white),
+                     ),
+                        width: double.infinity,
+                        color: Color.fromARGB(100, 22, 44, 33),
+                        margin: EdgeInsets.all(20),
+                        padding: EdgeInsets.all(40),
+                        ),
               CarouselSlider(
                 options: CarouselOptions(
                   height: 100.0,
@@ -228,6 +244,8 @@ class _houseState extends State<house> {
                   });
                 }).toList(),
               ),
+                 
         ])));
+        
   }
 }

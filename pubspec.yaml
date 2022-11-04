@@ -55,6 +55,7 @@ dependencies:
   carousel_grid: ^1.0.5
   provider: ^6.0.4
   english_words: ^4.0.0
+  drop_shadow_image: ^0.9.1
 
 
   
