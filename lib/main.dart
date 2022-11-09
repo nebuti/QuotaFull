@@ -1,15 +1,17 @@
 import 'dart:async';
+//@dart=2.9
 
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mouse/Home_Sc.dart';
-import 'package:mouse/car.dart';
 import 'package:mouse/category.dart';
 import 'package:mouse/introduction_screen.dart';
-import 'package:mouse/house.dart';
+import 'package:mouse/pages/login_page.dart';
 import 'package:page_transition/page_transition.dart';
+import 'common/car/car.dart';
+import 'common/house/house.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -107,9 +109,8 @@ class _HomeState extends State<Home> {
     ),
     Icon(
       Icons.category,
-      size: 30,),
-  
-    
+      size: 30,
+    ),
   ];
 
   int index = 0;
@@ -120,14 +121,43 @@ class _HomeState extends State<Home> {
       backgroundColor: Color.fromARGB(255, 55, 70, 62),
       drawer: const NavigationDrawer(),
       appBar: AppBar(
-        
-        title: const Text('Home page',
-        textAlign: TextAlign.center,
-        style: TextStyle( 
+          backgroundColor: Color.fromARGB(255, 79, 230, 9),
+          title: Container(
+              child: Align(
+                  alignment: Alignment.topRight,
+                  child: ClipOval( 
+                     child: Material(
+                    color: Color.fromARGB(255, 66, 180, 60), // Button color
+                    child: InkWell(
+                      splashColor: Colors.red, // Splash color
+                      onTap: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => LoginPage()));
+                      },
+                      child: SizedBox(
+                        width: 51,
+                        height: 51,
+                        child: Icon(
+                          Icons.add,
+                        ),
+                      ),
 
-        ),),
-        backgroundColor: Color.fromARGB(255, 0, 168, 6),
-      ),
+                      
+                    ),
+                  )) // animationCurve: ,
+                  ))),
+
+      // appBar: AppBar(
+
+      //   title: const Text('Home page',
+      //   textAlign: TextAlign.center,
+      //   style: TextStyle(
+
+      //   ),),
+      //   backgroundColor: Color.fromARGB(255, 0, 168, 6),
+      // ),
       bottomNavigationBar: CurvedNavigationBar(
         color: Color.fromARGB(255, 0, 255, 21),
         items: items,
@@ -166,8 +196,6 @@ class _HomeState extends State<Home> {
       default:
         widget = Home_Sc();
         break;
-      
-        
     }
     return widget;
   }

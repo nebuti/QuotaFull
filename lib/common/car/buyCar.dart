@@ -5,14 +5,14 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mouse/Home_Sc.dart';
-import 'package:mouse/car.dart';
-import 'package:mouse/car_sedan.dart';
 import 'package:mouse/grid_search.dart';
-import 'package:mouse/house.dart';
+
 import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:mouse/sellHouse.dart';
 import 'package:mouse/sign.dart';
 import 'package:scroll_snap_list/scroll_snap_list.dart';
+
+import 'car.dart';
+import 'car_sedan.dart';
 
 class sellCar extends StatefulWidget {
   @override

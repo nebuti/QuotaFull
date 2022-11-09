@@ -1,7 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:mouse/car_detaile.dart';
+import 'package:mouse/sign.dart';
+import 'package:mouse/type/home_page.dart';
+
+import 'common/car/car_detaile.dart';
 
 class category extends StatefulWidget {
   @override
@@ -11,7 +14,7 @@ class category extends StatefulWidget {
 List<String> images = [
   'assets/images/cs1.png',
   'assets/images/cs2.png',
-  'assets/images/cs3.png',
+  'assets/images/cs3.png',   
 ];
 
 class _categoryState extends State<category> {
@@ -144,7 +147,7 @@ class PopularcarTiles extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) {
-            return car_detail();
+            return type();
           }),
         );
       },
@@ -457,14 +460,6 @@ class PopularhouseTiles extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) {
-            return car_detail();
-          }),
-        );
-      },
       child: Column(
         children: <Widget>[
           Container(

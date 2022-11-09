@@ -1,11 +1,14 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:anim_search_bar/anim_search_bar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:mouse/grid_search.dart';
-import 'package:mouse/sellCar.dart';
-import 'package:mouse/carRent.dart';
-import 'package:mouse/sellHouse.dart';
+
+
+import 'buyCar.dart';
+import 'carRent.dart';
 
 class car extends StatefulWidget {
   @override
@@ -87,35 +90,46 @@ class _carState extends State<car> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-            color: Color.fromARGB(193, 255, 252, 252),
-            padding: const EdgeInsets.only(top: 58.0, right: 10, left: 10),
+            color: Color.fromARGB(255, 98, 255, 158),
+            height: double.infinity,
             child: Column(children: [
+                 InkWell(
+              onTap: (){
+                Navigator.pop(context);
+              },
+              child: Container(
+                height: 50,
+                width: 50,
+                decoration: BoxDecoration(
+                    border: Border.all(color: Color.fromARGB(255, 156, 155, 155).withOpacity(0.4)),
+                    borderRadius: BorderRadius.circular(15)
+                ),
+                child: Icon(Icons.arrow_back_rounded,color: Color.fromARGB(255, 97, 96, 96),),
+              ),
+            ),
               Container(
-                  height: 200,
-                  width: 500,
                   color: Color.fromARGB(255, 163, 213, 214),
                   child: Column(children: [
+                    // ignore: prefer_const_constructors
                     Text(
                       "wellcome to car station",
                       style: TextStyle(
-                          fontSize: 30,
+                          fontSize: 24,
                           fontWeight: FontWeight.bold,
                           color: Color.fromARGB(255, 0, 0, 0)),
                     ),
                     SizedBox(
-                      height: 40,
+                      height: 10,
                     ),
-                    Align(
-                      alignment: Alignment.bottomCenter,
+                    Container(
                       child: Column(
                         children: [
                           ElevatedButton.icon(
                             style: ElevatedButton.styleFrom(
-                              shape: new RoundedRectangleBorder(
-                                borderRadius: new BorderRadius.circular(100.0),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(100.0),
                               ),
                             ),
-
                             icon: Icon(
                               Icons.search_rounded,
                               size: 30.0,
@@ -134,24 +148,31 @@ class _carState extends State<car> {
                           ),
                         ],
                       ),
-                    )
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Container(
+                      height: 200,
+                      width: double.infinity,
+                      child: Image.asset(
+                        "images/p.gif",
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   ])),
-              SizedBox(
-                height: 0.5,
-              ),
               Container(
                   color: Color.fromARGB(195, 168, 245, 180),
-                  height: 100,
+                  height: 30,
                   child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            shape: new RoundedRectangleBorder(
-                              borderRadius: new BorderRadius.circular(20.0),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0),
                             ),
-                          ),
-                          // style: ThemeHelper().buttonStyle(),
+                          ), // style: ThemeHelper().buttonStyle(),
 
                           child: Text(
                             'Sell  ',
@@ -169,13 +190,10 @@ class _carState extends State<car> {
                             //After successful login we will redirect to profile page. Let's create profile page now
                           },
                         ),
-                        SizedBox(
-                          width: 200,
-                        ),
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            shape: new RoundedRectangleBorder(
-                              borderRadius: new BorderRadius.circular(20.0),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0),
                             ),
                           ),
                           // style: ThemeHelper().buttonStyle(),
@@ -197,10 +215,23 @@ class _carState extends State<car> {
                           },
                         ),
                       ])),
-              SizedBox(height: 0.5),
+              SizedBox(
+                height: 5,
+              ),
+                 Container( 
+                      child:  Text("Hello Everyone! This is car Campus",
+                                
+                             style: TextStyle(fontSize: 18, color: Colors.white),
+                     ),
+                        width: double.infinity,
+                       color: Color.fromARGB(255, 95, 97, 95)
+                        .withOpacity(0.5),
+                        margin: EdgeInsets.all(20),
+                        padding: EdgeInsets.all(40),
+                        ),
               CarouselSlider(
                 options: CarouselOptions(
-                  height: 200.0,
+                  height: 100.0,
                   viewportFraction: 0.98,
                   enlargeCenterPage: false,
                   enlargeStrategy: CenterPageEnlargeStrategy.height,
@@ -222,6 +253,7 @@ class _carState extends State<car> {
                   });
                 }).toList(),
               ),
+            
             ])));
   }
 }

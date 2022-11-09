@@ -64,6 +64,7 @@ class _carSearchScreenState extends State<carSearchScreen> {
                 controller: _textEditingController,
                 focusNode: _textFocusNode,
                 cursorColor: Colors.black,
+                // ignore: prefer_const_constructors
                 decoration: InputDecoration(
                     border: InputBorder.none,
                     focusedBorder: InputBorder.none,
@@ -80,16 +81,12 @@ class _carSearchScreenState extends State<carSearchScreen> {
                         .toList();
                     if (_textEditingController!.text.isNotEmpty &&
                         foodListSearch!.length == 0) {
-                      print('foodListSearch length ${foodListSearch!.length}');
+                      print('Search length ${foodListSearch!.length}');
                     }
                   });
                 },
               ),
             )),
-
-
-
-            
         body: _textEditingController!.text.isNotEmpty &&
                 foodListSearch!.length == 0
             ? Center(
@@ -142,8 +139,6 @@ class _carSearchScreenState extends State<carSearchScreen> {
                       ],
                     ),
                   );
-                }
-                 )
-                );
+                }));
   }
 }

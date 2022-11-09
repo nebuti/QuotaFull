@@ -1,14 +1,11 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:anim_search_bar/anim_search_bar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:mouse/grid_search.dart';
-import 'package:mouse/buyCar.dart';
+import 'package:mouse/sellCar.dart';
 import 'package:mouse/carRent.dart';
 import 'package:mouse/sellHouse.dart';
-import 'package:drop_shadow_image/drop_shadow_image.dart';
 
 class house extends StatefulWidget {
   @override
@@ -52,9 +49,9 @@ class _houseState extends State<house> {
     'Meat',
   ];
   final List<String> imagelist = [
-    'assets/images/h0.png',
-    'assets/images/h2.png',
-    'assets/images/h15.png',
+    'assets/images/c4.png',
+    'assets/images/h20.png',
+    'assets/images/h5.png',
   ];
   List<String>? carListSearch;
   final FocusNode _textFocusNode = FocusNode();
@@ -90,39 +87,41 @@ class _houseState extends State<house> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-          color: Color.fromARGB(255, 132, 227, 161),
-          height: double.infinity,
-          child: Column(
-          children: [
+            color: Color.fromARGB(193, 255, 252, 252),
+            padding: const EdgeInsets.only(top: 58.0, right: 10, left: 10),
+            child: Column(children: [
               Container(
+                  height: 200,
+                  width: 500,
                   color: Color.fromARGB(255, 163, 213, 214),
                   child: Column(children: [
-                    // ignore: prefer_const_constructors
                     Text(
-                      "wellcome to house station",
+                      "wellcome to car station",
                       style: TextStyle(
-                          fontSize: 24,
+                          fontSize: 30,
                           fontWeight: FontWeight.bold,
                           color: Color.fromARGB(255, 0, 0, 0)),
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 40,
                     ),
-                    Container(
+                    Align(
+                      alignment: Alignment.bottomCenter,
                       child: Column(
                         children: [
                           ElevatedButton.icon(
                             style: ElevatedButton.styleFrom(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(100.0),
+                              shape: new RoundedRectangleBorder(
+                                borderRadius: new BorderRadius.circular(100.0),
                               ),
                             ),
+
                             icon: Icon(
                               Icons.search_rounded,
                               size: 30.0,
                             ), //icon data for elevated button
                             label: Text(
-                              "search house ....",
+                              "search cars ....",
                               style: TextStyle(
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold,
@@ -135,37 +134,24 @@ class _houseState extends State<house> {
                           ),
                         ],
                       ),
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-              Container(
-                height: 200,
-                width: double.infinity,
-                child:Image.asset(
-                 "images/p2.gif",
-                          fit: BoxFit.cover,      
-                         
-                            ),),
-
-                      
-                            
-                  
+                    )
                   ])),
-                  
+              SizedBox(
+                height: 0.5,
+              ),
               Container(
                   color: Color.fromARGB(195, 168, 245, 180),
-                  height: 30,
-
+                  height: 100,
                   child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0),
+                            shape: new RoundedRectangleBorder(
+                              borderRadius: new BorderRadius.circular(20.0),
                             ),
-                          ),// style: ThemeHelper().buttonStyle(),
+                          ),
+                          // style: ThemeHelper().buttonStyle(),
 
                           child: Text(
                             'Sell  ',
@@ -183,11 +169,13 @@ class _houseState extends State<house> {
                             //After successful login we will redirect to profile page. Let's create profile page now
                           },
                         ),
-                       
+                        SizedBox(
+                          width: 200,
+                        ),
                         ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0),
+                            shape: new RoundedRectangleBorder(
+                              borderRadius: new BorderRadius.circular(20.0),
                             ),
                           ),
                           // style: ThemeHelper().buttonStyle(),
@@ -209,20 +197,10 @@ class _houseState extends State<house> {
                           },
                         ),
                       ])),
-                           SizedBox( height: 5,),
-               Container( 
-                     
-                      child:  Text("Hello Everyone! This is house Campus",
-                             style: TextStyle(fontSize: 18, color: Colors.white),
-                     ),
-                        width: double.infinity,
-                        color: Color.fromARGB(100, 22, 44, 33),
-                        margin: EdgeInsets.all(20),
-                        padding: EdgeInsets.all(40),
-                        ),
+              SizedBox(height: 0.5),
               CarouselSlider(
                 options: CarouselOptions(
-                  height: 100.0,
+                  height: 200.0,
                   viewportFraction: 0.98,
                   enlargeCenterPage: false,
                   enlargeStrategy: CenterPageEnlargeStrategy.height,
@@ -244,8 +222,6 @@ class _houseState extends State<house> {
                   });
                 }).toList(),
               ),
-                 
-        ])));
-        
+            ])));
   }
 }
