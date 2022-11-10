@@ -23,5 +23,6 @@ class House {
     required this.time,
     required this.moreImagesUrl,
     required this.isFav,
+    required String videoUrl,
   });
 }

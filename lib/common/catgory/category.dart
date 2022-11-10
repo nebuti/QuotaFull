@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:mouse/sign.dart';
-import 'package:mouse/type/home_page.dart';
+import 'package:mouse/common/catgory/houselist/home_page.dart';
 
-import 'common/car/car_detaile.dart';
+import '../car/car_detaile.dart';
 
 class category extends StatefulWidget {
   @override
@@ -30,7 +30,7 @@ class _categoryState extends State<category> {
             child: slide(),
           ),
           Text(
-            'Sell Car Category  ',
+            'Sell House Category  ',
             style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
@@ -38,10 +38,11 @@ class _categoryState extends State<category> {
           ),
           PopularcarTitle(),
           Expanded(
-            child: PopularcarItems(),
+              child: PopularhouseItems(),
+        
           ),
           Text(
-            'Sell House Category  ',
+            'Sell Car Category  ',
             style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
@@ -49,7 +50,7 @@ class _categoryState extends State<category> {
           ),
           PopularhouseTitle(),
           Expanded(
-            child: PopularhouseItems(),
+              child: PopularcarItems(),
           ),
         ],
       ),
@@ -171,10 +172,13 @@ class PopularcarTiles extends StatelessWidget {
                     Radius.circular(5.0),
                   ),
                 ),
-                child: Container(
-                  width: 160,
-                  height: 150,
-                  child: Column(
+             child: Container( 
+
+                         width: 160,
+
+                         height: 150, 
+
+             child: Column(
                     children: <Widget>[
                       Stack(
                         children: <Widget>[
@@ -459,7 +463,15 @@ class PopularhouseTiles extends StatelessWidget {
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+     return InkWell(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) {
+            return type();
+          }),
+        );
+      },
       child: Column(
         children: <Widget>[
           Container(

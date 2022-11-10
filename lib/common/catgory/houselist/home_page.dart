@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:mouse/main.dart';
-import 'package:mouse/type/house/houselist/house_land.dart';
-import 'package:mouse/type/house/houselist/house_large.dart';
-import 'package:mouse/type/house/houselist/house_low.dart';
-import 'package:mouse/type/house/houselist/house_mid.dart';
-import 'package:mouse/type/util/my_tab.dart';
 
 import '../category.dart';
-import 'house/houselist/house_all.dart';
+import 'house_all.dart';
+import 'house_land.dart';
+import 'house_large.dart';
+import 'house_low.dart';
+import 'house_mid.dart';
 
 class type extends StatefulWidget {
   const type({super.key});

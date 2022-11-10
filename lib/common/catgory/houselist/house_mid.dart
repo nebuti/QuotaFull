@@ -1,7 +1,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:mouse/common/house/house_detaile.dart';
-import 'package:mouse/type/house/houselist/house_all.dart';
 
 import '../../../common/car/car_detaile.dart';
 import 'house.dart';
@@ -178,6 +177,7 @@ class _HousesState extends State<Houses> {
 
 final _house1 = House(
   imageUrl: 'assets/images/h16.png',
+   videoUrl: "videos/sample.mp4",
   address: 'Janison, MI 49428,SF',
   description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
   price: 200.00,
@@ -199,6 +199,7 @@ final _house1 = House(
 
 final _house2 = House(
     imageUrl: 'assets/images/h2.png',
+     videoUrl: "videos/sample.mp4",
     address: '351, Rockwood Dr,SF',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
     price: 140.00,
@@ -220,6 +221,7 @@ final _house2 = House(
 
 final _house3 = House(
     imageUrl: 'assets/images/h21.png',
+     videoUrl: "videos/sample.mp4",
     address: '354, Hendrywood Dr,SF',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
     price: 210.00,
@@ -241,6 +243,7 @@ final _house3 = House(
 
 final _house4 = House(
     imageUrl: 'assets/images/h7.png',
+     videoUrl: "videos/sample.mp4",
     address: 'Manison, MI 49526,SF',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
     price: 170.00,
@@ -262,6 +265,7 @@ final _house4 = House(
 
 final _house5 = House(
     imageUrl: 'assets/images/h18.png',
+     videoUrl: "videos/sample.mp4",
     address: 'BackStreet, MI 49526,SF',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
     price: 150.00,
@@ -284,6 +288,7 @@ final _house5 = House(
 
 final _house8 = House(
     imageUrl: 'assets/images/h17.png',
+     videoUrl: "videos/sample.mp4",
     address: 'BackStreet, MI 49526,SF',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
     price: 150.00,
@@ -305,6 +310,7 @@ final _house8 = House(
 
 final _house7 = House(
     imageUrl: 'assets/images/h9.png',
+     videoUrl: "videos/sample.mp4",
     address: 'BackStreet, MI 49526,SF',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
     price: 150.00,
@@ -326,6 +332,7 @@ final _house7 = House(
 
 final _house6 = House(
     imageUrl: 'assets/images/h5.png',
+     videoUrl: "videos/sample.mp4",
     address: 'BackStreet, MI 49526,SF',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
     price: 150.00,
@@ -347,6 +354,7 @@ final _house6 = House(
 
 final _house9 = House(
     imageUrl: 'assets/images/h14.png',
+     videoUrl: "videos/sample.mp4",
     address: 'BackStreet, MI 49526,SF',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
     price: 150.00,
@@ -368,6 +376,7 @@ final _house9 = House(
 
 final _house10 = House(
     imageUrl: 'assets/images/h1.png',
+     videoUrl: "videos/sample.mp4",
     address: 'BackStreet, MI 49526,SF',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
     price: 150.00,

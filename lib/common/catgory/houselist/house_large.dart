@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:mouse/common/house/house_detaile.dart';
 
 
 import '../../../common/car/car_detaile.dart';
-import '../../../common/house/house_detaile.dart';
 import 'house.dart';
 
-class house_low extends StatelessWidget {
+class house_large extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -170,7 +170,8 @@ class _HousesState extends State<Houses> {
 }
 
 final _house1 = House(
-    imageUrl: 'assets/images/h16.png',
+    imageUrl: 'assets/images/h11.png',
+     videoUrl: "videos/sample.mp4",
     address: 'Janison, MI 49428,SF',
     description:
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
@@ -190,8 +191,118 @@ final _house1 = House(
       'assets/images/indoor5.jpg',
     ]);
 
+final _house6 = House(
+    imageUrl: 'assets/images/h11.png',
+     videoUrl: "videos/sample.mp4",
+    address: 'Janison, MI 49428,SF',
+    description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+    price: 200.00,
+    bedRooms: 4,
+    bathRooms: 2,
+    garages: 2,
+    sqFeet: 1.416,
+    time: 20,
+    isFav: false,
+    moreImagesUrl: [
+      'assets/images/house6.',
+      'assets/images/h4.jpg',
+      'assets/images/h8.jpg',
+      'assets/images/indoor3.jpg',
+      'assets/images/h7.jpg',
+      'assets/images/indoor5.jpg',
+    ]);
+
+final _house8 = House(
+    imageUrl: 'assets/images/h11.png',
+     videoUrl: "videos/sample.mp4",
+    address: 'Janison, MI 49428,SF',
+    description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+    price: 200.00,
+    bedRooms: 4,
+    bathRooms: 2,
+    garages: 2,
+    sqFeet: 1.416,
+    time: 20,
+    isFav: false,
+    moreImagesUrl: [
+      'assets/images/house6.',
+      'assets/images/h4.jpg',
+      'assets/images/h8.jpg',
+      'assets/images/indoor3.jpg',
+      'assets/images/h7.jpg',
+      'assets/images/indoor5.jpg',
+    ]);
+
+final _house7 = House(
+    imageUrl: 'assets/images/h11.png',
+     videoUrl: "videos/sample.mp4",
+    address: 'Janison, MI 49428,SF',
+    description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+    price: 200.00,
+    bedRooms: 4,
+    bathRooms: 2,
+    garages: 2,
+    sqFeet: 1.416,
+    time: 20,
+    isFav: false,
+    moreImagesUrl: [
+      'assets/images/house6.',
+      'assets/images/h4.jpg',
+      'assets/images/h8.jpg',
+      'assets/images/indoor3.jpg',
+      'assets/images/h7.jpg',
+      'assets/images/indoor5.jpg',
+    ]);
+
+final _house5 = House(
+    imageUrl: 'assets/images/h11.png',
+     videoUrl: "videos/sample.mp4",
+    address: 'Janison, MI 49428,SF',
+    description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+    price: 200.00,
+    bedRooms: 4,
+    bathRooms: 2,
+    garages: 2,
+    sqFeet: 1.416,
+    time: 20,
+    isFav: false,
+    moreImagesUrl: [
+      'assets/images/house6.',
+      'assets/images/h4.jpg',
+      'assets/images/h8.jpg',
+      'assets/images/indoor3.jpg',
+      'assets/images/h7.jpg',
+      'assets/images/indoor5.jpg',
+    ]);
+
+final _house4 = House(
+    imageUrl: 'assets/images/h11.png',
+     videoUrl: "videos/sample.mp4",
+    address: 'Janison, MI 49428,SF',
+    description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+    price: 200.00,
+    bedRooms: 4,
+    bathRooms: 2,
+    garages: 2,
+    sqFeet: 1.416,
+    time: 20,
+    isFav: false,
+    moreImagesUrl: [
+      'assets/images/house6.',
+      'assets/images/h4.jpg',
+      'assets/images/h8.jpg',
+      'assets/images/indoor3.jpg',
+      'assets/images/h7.jpg',
+      'assets/images/indoor5.jpg',
+    ]);
 final _house2 = House(
-    imageUrl: 'assets/images/h2.png',
+    imageUrl: 'assets/images/h12.png',
+     videoUrl: "videos/sample.mp4",
     address: '351, Rockwood Dr,SF',
     description:
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
@@ -212,7 +323,8 @@ final _house2 = House(
     ]);
 
 final _house3 = House(
-    imageUrl: 'assets/images/h21.png',
+    imageUrl: 'assets/images/h2.png',
+     videoUrl: "videos/sample.mp4",
     address: '354, Hendrywood Dr,SF',
     description:
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
@@ -232,113 +344,9 @@ final _house3 = House(
       'assets/images/indoor5.jpg',
     ]);
 
-final _house4 = House(
-    imageUrl: 'assets/images/h7.png',
-    address: 'Manison, MI 49526,SF',
-    description:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-    price: 170.00,
-    bedRooms: 2,
-    bathRooms: 1,
-    garages: 1,
-    sqFeet: 1.210,
-    time: 30,
-    isFav: false,
-    moreImagesUrl: [
-      'assets/images/house6.png',
-      'assets/images/h4.jpg',
-      'assets/images/h8.jpg',
-      'assets/images/indoor3.jpg',
-      'assets/images/h7.jpg',
-      'assets/images/indoor5.jpg',
-    ]);
-
-final _house5 = House(
-    imageUrl: 'assets/images/h18.png',
-    address: 'BackStreet, MI 49526,SF',
-    description:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-    price: 150.00,
-    bedRooms: 3,
-    bathRooms: 1,
-    garages: 1,
-    sqFeet: 1.42,
-    time: 240,
-    isFav: false,
-    moreImagesUrl: [
-      'assets/images/house6.png',
-      'assets/images/h4.png',
-      'assets/images/h8.jpg',
-      'assets/images/indoor3.jpg',
-      'assets/images/h7.jpg',
-      'assets/images/indoor5.jpg',
-    ]);
-
-final _house8 = House(
-    imageUrl: 'assets/images/h17.png',
-    address: 'BackStreet, MI 49526,SF',
-    description:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-    price: 150.00,
-    bedRooms: 3,
-    bathRooms: 1,
-    garages: 1,
-    sqFeet: 1.42,
-    time: 240,
-    isFav: false,
-    moreImagesUrl: [
-      'assets/images/house6.jpeg',
-      'assets/images/h4.jpg',
-      'assets/images/h8.jpg',
-      'assets/images/indoor3.jpg',
-      'assets/images/h7.jpg',
-      'assets/images/indoor5.jpg',
-    ]);
-
-final _house7 = House(
-    imageUrl: 'assets/images/h9.png',
-    address: 'BackStreet, MI 49526,SF',
-    description:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-    price: 150.00,
-    bedRooms: 3,
-    bathRooms: 1,
-    garages: 1,
-    sqFeet: 1.42,
-    time: 240,
-    isFav: false,
-    moreImagesUrl: [
-      'assets/images/house6.jpeg',
-      'assets/images/h4.jpg',
-      'assets/images/h8.jpg',
-      'assets/images/indoor3.jpg',
-      'assets/images/h7.jpg',
-      'assets/images/indoor5.jpg',
-    ]);
-
-final _house6 = House(
-    imageUrl: 'assets/images/h5.png',
-    address: 'BackStreet, MI 49526,SF',
-    description:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-    price: 150.00,
-    bedRooms: 3,
-    bathRooms: 1,
-    garages: 1,
-    sqFeet: 1.42,
-    time: 240,
-    isFav: false,
-    moreImagesUrl: [
-      'assets/images/house6.jpeg',
-      'assets/images/h4.jpg',
-      'assets/images/h8.jpg',
-      'assets/images/indoor3.jpg',
-      'assets/images/h7.jpg',
-      'assets/images/indoor5.jpg',
-    ]);
-
 final _house9 = House(
-    imageUrl: 'assets/images/h14.png',
+    imageUrl: 'assets/images/h1.png',
+     videoUrl: "videos/sample.mp4",
     address: 'BackStreet, MI 49526,SF',
     description:
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
@@ -359,7 +367,8 @@ final _house9 = House(
     ]);
 
 final _house10 = House(
-    imageUrl: 'assets/images/h1.png',
+    imageUrl: 'assets/images/h9.png',
+     videoUrl: "videos/sample.mp4",
     address: 'BackStreet, MI 49526,SF',
     description:
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
@@ -378,6 +387,112 @@ final _house10 = House(
       'assets/images/h7.jpg',
       'assets/images/indoor5.jpg',
     ]);
+final _house16 = House(
+    imageUrl: 'assets/images/h19.png',
+     videoUrl: "videos/sample.mp4",
+    address: 'Janison, MI 49428,SF',
+    description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+    price: 200.00,
+    bedRooms: 4,
+    bathRooms: 2,
+    garages: 2,
+    sqFeet: 1.416,
+    time: 20,
+    isFav: false,
+    moreImagesUrl: [
+      'assets/images/house6.',
+      'assets/images/h4.jpg',
+      'assets/images/h8.jpg',
+      'assets/images/indoor3.jpg',
+      'assets/images/h7.jpg',
+      'assets/images/indoor5.jpg',
+    ]);
+final _house17 = House(
+    imageUrl: 'assets/images/h20.png',
+     videoUrl: "videos/sample.mp4",
+    address: 'Janison, MI 49428,SF',
+    description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+    price: 200.00,
+    bedRooms: 4,
+    bathRooms: 2,
+    garages: 2,
+    sqFeet: 1.416,
+    time: 20,
+    isFav: false,
+    moreImagesUrl: [
+      'assets/images/house6.',
+      'assets/images/h4.jpg',
+      'assets/images/h8.jpg',
+      'assets/images/indoor3.jpg',
+      'assets/images/h7.jpg',
+      'assets/images/indoor5.jpg',
+    ]);
+final _house18 = House(
+    imageUrl: 'assets/images/h22.png',
+     videoUrl: "videos/sample.mp4",
+    address: 'Janison, MI 49428,SF',
+    description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+    price: 200.00,
+    bedRooms: 4,
+    bathRooms: 2,
+    garages: 2,
+    sqFeet: 1.416,
+    time: 20,
+    isFav: false,
+    moreImagesUrl: [
+      'assets/images/house6.',
+      'assets/images/h4.jpg',
+      'assets/images/h8.jpg',
+      'assets/images/indoor3.jpg',
+      'assets/images/h7.jpg',
+      'assets/images/indoor5.jpg',
+    ]);
+final _house19 = House(
+    imageUrl: 'assets/images/h17.png',
+     videoUrl: "videos/sample.mp4",
+    address: 'Janison, MI 49428,SF',
+    description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+    price: 200.00,
+    bedRooms: 4,
+    bathRooms: 2,
+    garages: 2,
+    sqFeet: 1.416,
+    time: 20,
+    isFav: false,
+    moreImagesUrl: [
+      'assets/images/house6.',
+      'assets/images/h4.jpg',
+      'assets/images/h8.jpg',
+      'assets/images/indoor3.jpg',
+      'assets/images/h7.jpg',
+      'assets/images/indoor5.jpg',
+    ]);
+final _house20 = House(
+    imageUrl: 'assets/images/h1.png',
+     videoUrl: "videos/sample.mp4",
+    address: 'Janison, MI 49428,SF',
+    description:
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+    price: 200.00,
+    bedRooms: 4,
+    bathRooms: 2,
+    garages: 2,
+    sqFeet: 1.416,
+    time: 20,
+    isFav: false,
+    moreImagesUrl: [
+      'assets/images/house6.',
+      'assets/images/h4.jpg',
+      'assets/images/h8.jpg',
+      'assets/images/indoor3.jpg',
+      'assets/images/h7.jpg',
+      'assets/images/indoor5.jpg',
+    ]);
+
 final List<House> houseList = [
   _house2,
   _house1,
@@ -388,7 +503,13 @@ final List<House> houseList = [
   _house7,
   _house8,
   _house9,
-  _house10
+  _house10,
+  _house20,
+  _house17,
+  _house16,
+  _house18,
+  _house16,
+  _house19,
 ];
 
 List<String> categoryList = [

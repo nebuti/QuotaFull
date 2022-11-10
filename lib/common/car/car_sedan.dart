@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 
-import '../house/sellHouse.dart';
+import '../house/buyHouse.dart';
 import 'car_detaile.dart';
 
 class car_sedan extends StatelessWidget {

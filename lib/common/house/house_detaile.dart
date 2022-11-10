@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mouse/common/house/slide.dart';
 
-import '../../category.dart';
-import '../../type/home_page.dart';
-import '../../type/house/houselist/house.dart';
-import '../../type/house/houselist/house_all.dart';
+import '../catgory/category.dart';
+import '../catgory/houselist/home_page.dart';
+import '../catgory/houselist/house.dart';
 
 class DetailsScreen extends StatefulWidget {
   final House house;
@@ -28,10 +27,14 @@ class _DetailsScreenState extends State<DetailsScreen> {
             children: [
               Stack(
                 children: [
-                  CarouselImages(widget.house.moreImagesUrl),
                   CustomAppBar(),
                 ],
               ),
+              Container(
+                height: 150,
+                child: CarouselImages(widget.house.moreImagesUrl),
+              ),
+              // Videodis (),
               HouseDetails(widget.house),
             ],
           ),

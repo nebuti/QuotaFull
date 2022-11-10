@@ -5,18 +5,17 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mouse/Home_Sc.dart';
-import 'package:mouse/car.dart';
-import 'package:mouse/car_sedan.dart';
 import 'package:mouse/grid_search.dart';
-import 'package:mouse/house.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:mouse/sellHouse.dart';
+import 'package:mouse/cheek.dart';
 import 'package:mouse/sign.dart';
 import 'package:scroll_snap_list/scroll_snap_list.dart';
+import '../car/car.dart';
+import '../car/car_sedan.dart';
 
-class sellCar extends StatefulWidget {
+class buyCar extends StatefulWidget {
   @override
-  _sellCarState createState() => _sellCarState();
+  _buyCarState createState() => _buyCarState();
 }
 
 Route _createRoute() {
@@ -37,7 +36,7 @@ Route _createRoute() {
   );
 }
 
-class _sellCarState extends State<sellCar> {
+class _buyCarState extends State<buyCar> {
   List<String> carList = [
     'Orange',
     'Berries',
@@ -300,37 +299,35 @@ class workCar extends StatelessWidget {
                 icon: Icon(Icons.arrow_back),
                 onPressed: () {
                   Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => sellCar()));
+                      MaterialPageRoute(builder: (context) => buyCar()));
                 }),
             backgroundColor: Color.fromARGB(255, 79, 230, 9),
             title: Container(
               child: Column(),
             )),
         body: ListView(children: [
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              shape: new RoundedRectangleBorder(
+                borderRadius: new BorderRadius.circular(20.0),
+              ),
+            ),
+            // style: ThemeHelper().buttonStyle(),
 
-           ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    shape: new RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(20.0),
-                    ),
-                  ),
-                  // style: ThemeHelper().buttonStyle(),
+            child: Text(
+              'Cheek  ',
+              style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 248, 248, 248)),
+            ),
 
-                  child: Text(
-                    'Cheek  ',
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(255, 248, 248, 248)),
-                  ),
-
-                  onPressed: () { 
-                  Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) => car_sedan()
-                    ));
-                    //After successful login we will redirect to profile page. Let's create profile page now
-                  },
-                ),
+            onPressed: () {
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) => car_sedan()));
+              //After successful login we will redirect to profile page. Let's create profile page now
+            },
+          ),
           Container(
             child: DropdownButtonHideUnderline(
               child: DropdownButton2(
@@ -356,15 +353,14 @@ class workCar extends StatelessWidget {
                 value: selectedValue,
                 onChanged: (value) {
                   selectedValue = value.toString();
-                  
-                    switch(selectedValue){
-                      case"A_Item1":selectedValue=car() as String?;
+
+                  switch (selectedValue) {
+                    case "A_Item1":
+                      selectedValue = car() as String?;
                       break;
-                    }
-              },    
-              
-              
-                   
+                  }
+                },
+
                 buttonHeight: 40,
                 buttonWidth: 200,
                 itemHeight: 40,
@@ -487,7 +483,8 @@ class homeCar extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Descrebtion page'),
-          backgroundColor: Color.fromARGB(255, 79, 230, 9), ),
+        backgroundColor: Color.fromARGB(255, 79, 230, 9),
+      ),
       body: ListView(
         children: [Container()],
       ),

@@ -3,7 +3,7 @@ import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:mouse/category.dart';
+import 'package:mouse/common/catgory/category.dart';
 import 'package:mouse/pages/favorite.dart';
 import 'package:mouse/pages/login_page.dart';
 import 'package:mouse/pages/profile_page.dart';

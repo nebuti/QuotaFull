@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:mouse/grid_search.dart';
 
-
 import 'buyCar.dart';
 import 'carRent.dart';
 
@@ -88,25 +87,12 @@ class _carState extends State<car> {
 
   @override
   Widget build(BuildContext context) {
+    final shape = StadiumBorder();
     return Scaffold(
         body: Container(
             color: Color.fromARGB(255, 98, 255, 158),
             height: double.infinity,
             child: Column(children: [
-                 InkWell(
-              onTap: (){
-                Navigator.pop(context);
-              },
-              child: Container(
-                height: 50,
-                width: 50,
-                decoration: BoxDecoration(
-                    border: Border.all(color: Color.fromARGB(255, 156, 155, 155).withOpacity(0.4)),
-                    borderRadius: BorderRadius.circular(15)
-                ),
-                child: Icon(Icons.arrow_back_rounded,color: Color.fromARGB(255, 97, 96, 96),),
-              ),
-            ),
               Container(
                   color: Color.fromARGB(255, 163, 213, 214),
                   child: Column(children: [
@@ -167,68 +153,88 @@ class _carState extends State<car> {
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0),
+                        Container(
+                          decoration: ShapeDecoration(
+                              shape: shape,
+                              // ignore: prefer_const_literals_to_create_immutables
+                              gradient: LinearGradient(colors: [
+                                Colors.orange,
+                                Colors.green,
+                                Color.fromARGB(255, 176, 185, 233),
+                              ])),
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.transparent,
+                              shadowColor: Colors.transparent,
+                              elevation: 0,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
                             ),
-                          ), // style: ThemeHelper().buttonStyle(),
-
-                          child: Text(
-                            'Sell  ',
-                            style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                color: Color.fromARGB(255, 248, 248, 248)),
+                            child: Text(
+                              'buy  ',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color.fromARGB(255, 248, 248, 248)),
+                            ),
+                            onPressed: () {
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => buyCar()));
+                              //After successful login we will redirect to profile page. Let's create profile page now
+                            },
                           ),
-
-                          onPressed: () {
-                            Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => sellCar()));
-                            //After successful login we will redirect to profile page. Let's create profile page now
-                          },
                         ),
-                        ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0),
+                        Container(
+                          decoration: ShapeDecoration(
+                              shape: shape,
+                              // ignore: prefer_const_literals_to_create_immutables
+                              gradient: LinearGradient(colors: [
+                                Colors.orange,
+                                Colors.green,
+                                Color.fromARGB(255, 176, 185, 233),
+                              ])),
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.transparent,
+                              shadowColor: Colors.transparent,
+                              elevation: 0,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
                             ),
+                            child: Text(
+                              'Rent  ',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color.fromARGB(255, 248, 248, 248)),
+                            ),
+                            onPressed: () {
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => carRent()));
+                              //After successful login we will redirect to profile page. Let's create profile page now
+                            },
                           ),
-                          // style: ThemeHelper().buttonStyle(),
-
-                          child: Text(
-                            'Rent  ',
-                            style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                color: Color.fromARGB(255, 248, 248, 248)),
-                          ),
-
-                          onPressed: () {
-                            Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => carRent()));
-                            //After successful login we will redirect to profile page. Let's create profile page now
-                          },
                         ),
                       ])),
               SizedBox(
                 height: 5,
               ),
-                 Container( 
-                      child:  Text("Hello Everyone! This is car Campus",
-                                
-                             style: TextStyle(fontSize: 18, color: Colors.white),
-                     ),
-                        width: double.infinity,
-                       color: Color.fromARGB(255, 95, 97, 95)
-                        .withOpacity(0.5),
-                        margin: EdgeInsets.all(20),
-                        padding: EdgeInsets.all(40),
-                        ),
+              Container(
+                child: Text(
+                  "Hello Everyone! This is car Campus",
+                  style: TextStyle(fontSize: 18, color: Colors.white),
+                ),
+                width: double.infinity,
+                color: Color.fromARGB(255, 95, 97, 95).withOpacity(0.5),
+                margin: EdgeInsets.all(20),
+                padding: EdgeInsets.all(40),
+              ),
               CarouselSlider(
                 options: CarouselOptions(
                   height: 100.0,
@@ -253,7 +259,6 @@ class _carState extends State<car> {
                   });
                 }).toList(),
               ),
-            
             ])));
   }
 }
