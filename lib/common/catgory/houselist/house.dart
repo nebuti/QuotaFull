@@ -8,6 +8,7 @@ class House {
   double sqFeet;
   int garages;
   int time;
+  String videoUrl;
   List<String> moreImagesUrl;
   bool isFav;
 
@@ -23,6 +24,6 @@ class House {
     required this.time,
     required this.moreImagesUrl,
     required this.isFav,
-    required String videoUrl,
+    required this.videoUrl,
   });
 }

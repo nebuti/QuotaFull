@@ -15,10 +15,11 @@ import 'package:scroll_snap_list/scroll_snap_list.dart';
 import '../house/buyHouse.dart';
 import 'car.dart';
 import 'car_sedan.dart';
+import 'car_work/car_work.dart';
 
-class buyCar extends StatefulWidget {
+class buy_Car extends StatefulWidget {
   @override
-  _buyCarState createState() => _buyCarState();
+  _buy_CarState createState() => _buy_CarState();
 }
 
 Route _createRoute() {
@@ -39,7 +40,7 @@ Route _createRoute() {
   );
 }
 
-class _buyCarState extends State<buyCar> {
+class _buy_CarState extends State<buy_Car> {
   List<String> carList = [
     'Orange',
     'Berries',
@@ -219,7 +220,7 @@ class _buyCarState extends State<buyCar> {
                                   Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => workCar()));
+                                          builder: (context) => car_work()));
                                   //After successful login we will redirect to profile page. Let's create profile page now
                                 },
                               ),

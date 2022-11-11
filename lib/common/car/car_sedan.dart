@@ -1,67 +1,63 @@
 import 'package:flutter/material.dart';
 
-
 import '../house/buyHouse.dart';
 import 'car_detaile.dart';
+import 'car_work/car_work.dart';
 
 class car_sedan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-         leading: IconButton(
+        appBar: AppBar(
+            leading: IconButton(
                 icon: Icon(Icons.arrow_back),
                 onPressed: () {
-                  Navigator.pushReplacement(
-                      context, MaterialPageRoute(builder: (context) => workCar()));
-                }),
-          backgroundColor: Color.fromARGB(255, 79, 230, 9), title: Container()),
-    // ignore: unnecessary_new
-    body: new Column(
-        children: <Widget>[
-          ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20.0),
-                    ),
-                  ),
-                  // style: ThemeHelper().buttonStyle(),
-
-                  // ignore: prefer_const_constructors
-                  child: Text(
-                    'Cheek  ',
-                    // ignore: prefer_const_constructors
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(255, 248, 248, 248)),
-                  ),
-
-                  onPressed: () { 
                   Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) => car_detail(),
-                    ));
-                    //After successful login we will redirect to profile page. Let's create profile page now
-                  },
-                ),
-  
-           HorizontalList(),
+                      MaterialPageRoute(builder: (context) => car_work()));
+                }),
+            backgroundColor: Color.fromARGB(255, 79, 230, 9),
+            title: Container()),
+        // ignore: unnecessary_new
+        body: new Column(children: <Widget>[
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20.0),
+              ),
+            ),
+            // style: ThemeHelper().buttonStyle(),
 
-          Padding(padding: const EdgeInsets.all(8.0),
+            // ignore: prefer_const_constructors
+            child: Text(
+              'Cheek  ',
+              // ignore: prefer_const_constructors
+              style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 248, 248, 248)),
+            ),
+
+            onPressed: () {
+              Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => car_detail(),
+                  ));
+              //After successful login we will redirect to profile page. Let's create profile page now
+            },
+          ),
+          HorizontalList(),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
             child: Container(
                 alignment: Alignment.centerLeft,
                 // ignore: prefer_const_constructors
-                child: Text('Recent products')),),
-
+                child: Text('Recent products')),
+          ),
           Flexible(child: Products()),
- 
-        ]
-      )
-    );
+        ]));
   }
 }
-
-
 
 class HorizontalList extends StatelessWidget {
   @override
@@ -75,22 +71,18 @@ class HorizontalList extends StatelessWidget {
             image_location: 'images/cats/tshirt.png',
             image_caption: 'shirt',
           ),
-
           Category(
             image_location: 'images/cats/dress.png',
             image_caption: 'dress',
           ),
-
           Category(
             image_location: 'images/cats/jeans.png',
             image_caption: 'pants',
           ),
-
           Category(
             image_location: 'images/cats/formal.png',
             image_caption: 'formal',
           ),
-
           Category(
             image_location: 'images/cats/informal.png',
             image_caption: 'formal',
@@ -105,7 +97,7 @@ class Category extends StatelessWidget {
   final String image_location;
   final String image_caption;
 
-  Category({ required this.image_location, required this.image_caption});
+  Category({required this.image_location, required this.image_caption});
 
   @override
   Widget build(BuildContext context) {
@@ -116,16 +108,18 @@ class Category extends StatelessWidget {
         child: Container(
           width: 80.0,
           child: ListTile(
-            title: Image.asset(
-              image_location,
-              width: 40.0,
-              height: 40.0,
-            ),
-            subtitle: Container(
-              alignment: Alignment.topCenter,
-              child: Text(image_caption, style: TextStyle(fontSize: 12.0),),
-            )
-          ),
+              title: Image.asset(
+                image_location,
+                width: 40.0,
+                height: 40.0,
+              ),
+              subtitle: Container(
+                alignment: Alignment.topCenter,
+                child: Text(
+                  image_caption,
+                  style: TextStyle(fontSize: 12.0),
+                ),
+              )),
         ),
       ),
     );
@@ -188,7 +182,7 @@ class _ProductsState extends State<Products> {
     return GridView.builder(
         itemCount: product_list.length,
         gridDelegate:
-        SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         itemBuilder: (BuildContext context, int index) {
           return Padding(
             padding: const EdgeInsets.all(4.0),
@@ -228,23 +222,22 @@ class Single_prod extends StatelessWidget {
                   footer: Container(
                     color: Colors.white70,
                     child: ListTile(
-                        leading: Text(
-                          prod_name,
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        title: Text(
-                          "\$$prod_price",
-                          style: TextStyle(
-                              color: Colors.red, fontWeight: FontWeight.w800),
-                        ),
-                        subtitle: Text(
-                          "\$$prod_old_price",
-                          style: TextStyle(
-                              color: Colors.black54,
-                              fontWeight: FontWeight.w800,
-                              decoration
-                                  :TextDecoration.lineThrough),
-                        ),
+                      leading: Text(
+                        prod_name,
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      title: Text(
+                        "\$$prod_price",
+                        style: TextStyle(
+                            color: Colors.red, fontWeight: FontWeight.w800),
+                      ),
+                      subtitle: Text(
+                        "\$$prod_old_price",
+                        style: TextStyle(
+                            color: Colors.black54,
+                            fontWeight: FontWeight.w800,
+                            decoration: TextDecoration.lineThrough),
+                      ),
                     ),
                   ),
                   child: Image.asset(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mouse/common/catgory/houselist/video.dart';
 import 'package:mouse/common/house/slide.dart';
 
 import '../catgory/category.dart';
@@ -23,20 +24,23 @@ class _DetailsScreenState extends State<DetailsScreen> {
       body: Stack(
         alignment: Alignment.bottomCenter,
         children: [
-          Column(
-            children: [
-              Stack(
-                children: [
-                  CustomAppBar(),
-                ],
-              ),
-              Container(
-                height: 150,
-                child: CarouselImages(widget.house.moreImagesUrl),
-              ),
-              // Videodis (),
-              HouseDetails(widget.house),
-            ],
+          Container(
+            height: double.infinity,
+            child: ListView(
+              children: [
+                Stack(
+                  children: [
+                    CustomAppBar(),
+                  ],
+                ),
+                Container(
+                  height: 150,
+                  child: CarouselImages(widget.house.moreImagesUrl),
+                ),
+                HouseDetails(widget.house),
+                Videodis(vidUrl: widget.house.videoUrl),
+              ],
+            ),
           ),
         ],
       ),

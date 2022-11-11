@@ -1,85 +1,95 @@
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+// import 'package:mouse/common/car/buyCar.dart';
 // import 'package:mouse/common/car/car_detaile.dart';
- 
+// import 'package:mouse/common/car/car_sedan.dart';
+import 'package:mouse/common/car/car_work/cargo.dart';
+import 'package:mouse/common/car/car_work/others.dart';
 
-// class workCar extends StatelessWidget {
-//   const workCar({Key? key}) : super(key: key);
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'car for work',
-//       theme: ThemeData(
-//         primarySwatch: Colors.green,
-//       ),
-//       home: const dropdown(),
-//       debugShowCheckedModeBanner: false,
-//     );
-//   }
-// }
- 
-// class dropdown extends StatefulWidget {
-//   const dropdown({Key? key}) : super(key: key);
- 
-//   @override
-//   _dropdownState createState() => _dropdownState();
-// }
- 
-// class _dropdownState extends State<dropdown> {
-   
-//   // Initial Selected Value
-//   String dropdownvalue = 'others';  
- 
-//   // List of items in our dropdown menu
-//   var items = [   
-//     'others',
-//     'min',
-//     'cargo',
-//     'Item 4',
-//     'Item 5',
-//   ];
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: const Text("car for work"),
-//       ),
-//       body: Center(
-//         child: Column(
-//           mainAxisAlignment: MainAxisAlignment.center,
-//           children: [
-//             DropdownButton(
-               
-//               // Initial Value
-//               value: dropdownvalue,
-               
-//               // Down Arrow Icon
-//               icon: const Icon(Icons.keyboard_arrow_down),   
-               
-//               // Array list of items
-//               items: items.map((String items) {
-//                 return DropdownMenuItem(
-//                   value: items,
-//                   child: Text(items),
-//                 );
-//               }).toList(),
-//               // After selecting the desired option,it will
-//               // change button value to selected value
-//               onChanged: (String? newValue) {
-//                 setState(() {
-//                   dropdownvalue = newValue!;
-//                   switch (selected){
-//  case " mid" : gf,
-//  case "cargo" :gg,
-//  case "dlg": go,
-//  case "bos" : main(),
+class car_work extends StatefulWidget {
+  const car_work({Key? key}) : super(key: key);
+  @override
+  _car_workState createState() => _car_workState();
+}
 
-//                   }
-//                 });
-//               },
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
+class _car_workState extends State<car_work> {
+  // Initial Selected Value
+  String dropdownvalue = 'others';
+  Widget activePage = Text("");
+  // List of items in our dropdown menu
+  var items = [
+    'others',
+    'min',
+    'cargo',
+    'Item 4',
+    'Item 5',
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(),
+        body: Center(
+          // ignore: sort_child_properties_last
+          child: Column(
+            children: [
+             
+              // DropdownButton<String>(
+              //     value: dropdownvalue,
+              //     icon: const Icon(Icons.keyboard_arrow_down),
+              //     style: const TextStyle(
+              //       color: Color.fromARGB(255, 53, 49, 49),
+              //     ),
+              //     underline: Container(
+              //       height: 2,
+              //       color: Color.fromARGB(255, 149, 49, 49),
+              //     ),
+              //     onChanged: (String? newValue) {
+              //       setState(() {
+              //         switch (newValue) {
+              //           case "others":
+              //             activePage = Car_others();
+              //             break;
+              //           case "min":
+              //             activePage = car_cargo();
+              //             break;
+              //           case "Item 4":
+              //             activePage = car_cargo();
+              //             break;
+              //           case "Item 5":
+              //             activePage = car_cargo();
+              //             break;
+              //         }
+              //       });
+              //     },
+              //     items: const [
+              //       DropdownMenuItem<String>(
+              //           value: 'cargo',
+              //            child: Text("cargo")),
+              //       DropdownMenuItem<String>(value: 'min',
+              //        child: Text("min")),
+              //       DropdownMenuItem<String>(
+              //           value: 'others', 
+              //           child: Text("others")),
+              //       DropdownMenuItem<String>(value: 'bus', 
+              //       child: Text("other")),
+              //       DropdownMenuItem<String>(value: 'max',
+              //        child: Text("max")),
+              //     ]),
+              // Expanded(
+              //   child: Container(
+              //     child: Column(
+              //       children: [
+                     
+              //         ListView(
+              //           children: [
+              //             activePage,
+              //           ],
+              //         ),
+              //       ],
+              //     ),
+              //   ),
+              // )
+            ],
+          ),
+        ));
+  }
+}

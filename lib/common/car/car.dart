@@ -182,7 +182,7 @@ class _carState extends State<car> {
                               Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => buyCar()));
+                                      builder: (context) => buy_Car()));
                               //After successful login we will redirect to profile page. Let's create profile page now
                             },
                           ),
