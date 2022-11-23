@@ -4,11 +4,10 @@ import 'package:anim_search_bar/anim_search_bar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:mouse/common/house/House_buy/homepage_buy.dart';
+import 'package:mouse/common/house/House_rent/homepage_rent.dart';
 import 'package:mouse/grid_search.dart';
-import 'package:drop_shadow_image/drop_shadow_image.dart';
 
-import '../car/buyCar.dart';
-import '../car/carRent.dart';
 
 
 class house extends StatefulWidget {
@@ -53,9 +52,9 @@ class _houseState extends State<house> {
     'Meat',
   ];
   final List<String> imagelist = [
-    'assets/images/h0.png',
-    'assets/images/h2.png',
-    'assets/images/h15.png',
+    'assets/images/house.png',
+    'assets/images/house1.png',
+    'assets/images/house2.png',
   ];
   List<String>? carListSearch;
   final FocusNode _textFocusNode = FocusNode();
@@ -89,18 +88,18 @@ class _houseState extends State<house> {
 
   @override
   Widget build(BuildContext context) {
+    final shape = StadiumBorder();
     return Scaffold(
         body: Container(
-          color: Color.fromARGB(255, 132, 227, 161),
-          height: double.infinity,
-          child: Column(
-          children: [
+            color: Color.fromARGB(255, 98, 255, 158),
+            height: double.infinity,
+            child: Column(children: [
               Container(
                   color: Color.fromARGB(255, 163, 213, 214),
                   child: Column(children: [
                     // ignore: prefer_const_constructors
                     Text(
-                      "wellcome to house station",
+                      "wellcome to house  station",
                       style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
@@ -123,7 +122,7 @@ class _houseState extends State<house> {
                               size: 30.0,
                             ), //icon data for elevated button
                             label: Text(
-                              "search house ....",
+                              "search cars ....",
                               style: TextStyle(
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold,
@@ -140,87 +139,103 @@ class _houseState extends State<house> {
                     SizedBox(
                       height: 10,
                     ),
-              Container(
-                height: 200,
-                width: double.infinity,
-                child:Image.asset(
-                 "images/p2.gif",
-                          fit: BoxFit.cover,      
-                         
-                            ),),
-
-                      
-                            
-                  
+                    Container(
+                      height: 200,
+                      width: double.infinity,
+                      child: Image.asset(
+                        "assets/images/p2.gif",
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   ])),
-                  
               Container(
                   color: Color.fromARGB(195, 168, 245, 180),
                   height: 30,
-
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0),
+                        Container(
+                          decoration: ShapeDecoration(
+                              shape: shape,
+                              // ignore: prefer_const_literals_to_create_immutables
+                              gradient: LinearGradient(colors: [
+                                Colors.orange,
+                                Colors.green,
+                                Color.fromARGB(255, 176, 185, 233),
+                              ])),
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.transparent,
+                              shadowColor: Colors.transparent,
+                              elevation: 0,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
                             ),
-                          ),// style: ThemeHelper().buttonStyle(),
-
-                          child: Text(
-                            'Sell  ',
-                            style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                color: Color.fromARGB(255, 248, 248, 248)),
+                            child: Text(
+                              'buy  ',
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color.fromARGB(255, 248, 248, 248)),
+                            ),
+                            onPressed: () {
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => homepage_buy()));
+                              //After successful login we will redirect to profile page. Let's create profile page now
+                            },
                           ),
-
-                          onPressed: () {
-                            Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => buy_Car()));
-                            //After successful login we will redirect to profile page. Let's create profile page now
-                          },
                         ),
-                       
-                        ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20.0),
+                        Container(
+                          decoration: ShapeDecoration(
+                              shape: shape,
+                              // ignore: prefer_const_literals_to_create_immutables
+                              gradient: LinearGradient(colors: [
+                                Colors.orange,
+                                Colors.green,
+                                Color.fromARGB(255, 176, 185, 233),
+                              ])),
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.transparent,
+                              shadowColor: Colors.transparent,
+                              elevation: 0,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
                             ),
+                            child: Text(
+                              'rent'  ,
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color.fromARGB(255, 248, 248, 248)),
+                            ),
+                            onPressed: () {
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => homepage_rent()));
+                              //After successful login we will redirect to profile page. Let's create profile page now
+                            },
                           ),
-                          // style: ThemeHelper().buttonStyle(),
-
-                          child: Text(
-                            'Rent  ',
-                            style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                color: Color.fromARGB(255, 248, 248, 248)),
-                          ),
-
-                          onPressed: () {
-                            Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => carRent()));
-                            //After successful login we will redirect to profile page. Let's create profile page now
-                          },
                         ),
                       ])),
-                           SizedBox( height: 5,),
-               Container( 
-                     
-                      child:  Text("Hello Everyone! This is house Campus",
-                             style: TextStyle(fontSize: 18, color: Colors.white),
-                     ),
-                        width: double.infinity,
-                        color: Color.fromARGB(100, 22, 44, 33),
-                        margin: EdgeInsets.all(20),
-                        padding: EdgeInsets.all(40),
-                        ),
+              SizedBox(
+                height: 5,
+              ),
+              Container(
+                child: Text(
+                  "Hello Everyone! This is car Campus",
+                  style: TextStyle(fontSize: 18, color: Colors.white),
+                ),
+                width: double.infinity,
+                color: Color.fromARGB(255, 95, 97, 95).withOpacity(0.5),
+                margin: EdgeInsets.all(20),
+                padding: EdgeInsets.all(40),
+              ),
               CarouselSlider(
                 options: CarouselOptions(
                   height: 100.0,
@@ -245,8 +260,6 @@ class _houseState extends State<house> {
                   });
                 }).toList(),
               ),
-                 
-        ])));
-        
+            ])));
   }
 }

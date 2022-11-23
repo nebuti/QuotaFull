@@ -185,7 +185,7 @@ class _HomeState extends State<Home> {
     Widget widget;
     switch (index) {
       case 1:
-        widget = car();
+        widget = car_button();
         break;
       case 3:
         widget = category();

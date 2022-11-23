@@ -4,17 +4,32 @@ import 'package:anim_search_bar/anim_search_bar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:mouse/common/car/vehicle_buy/body_type/category.dart';
+import 'package:mouse/common/car/vehicle_rent/rent_Car.dart';
+import 'package:mouse/common/catgory/category.dart';
 import 'package:mouse/grid_search.dart';
 
-import 'buyCar.dart';
-import 'carRent.dart';
 
-class car extends StatefulWidget {
+class car extends StatelessWidget {
   @override
-  _carState createState() => _carState();
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Scaffold(
+        appBar: AppBar(
+            backgroundColor: Color.fromARGB(255, 42, 236, 3),),
+        body: Container(
+          child: car_button(),
+        ));
+  }
 }
 
-class _carState extends State<car> {
+
+class car_button extends StatefulWidget {
+  @override
+  _car_buttonState createState() => _car_buttonState();
+}
+
+class _car_buttonState extends State<car_button> {
   List<String> carList = [
     'Orange',
     'Berries',
@@ -182,7 +197,7 @@ class _carState extends State<car> {
                               Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => buy_Car()));
+                                      builder: (context) => body()));
                               //After successful login we will redirect to profile page. Let's create profile page now
                             },
                           ),
@@ -216,7 +231,7 @@ class _carState extends State<car> {
                               Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => carRent()));
+                                      builder: (context) => car_rent()));
                               //After successful login we will redirect to profile page. Let's create profile page now
                             },
                           ),
