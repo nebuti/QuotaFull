@@ -88,13 +88,19 @@ class _RegistrationPageState extends State<RegistrationPage> {
                           ),
                           decoration: ThemeHelper().inputBoxDecorationShaddow(),
                         ),
-                        SizedBox(
-                          height: 30,
-                        ),
+                         SizedBox(height: 10.0),
                         Container(
                           child: TextFormField(
                             decoration: ThemeHelper().textInputDecoration(
                                 'Last Name', 'Enter your last name'),
+                          ),
+                          decoration: ThemeHelper().inputBoxDecorationShaddow(),
+                        ),
+                        SizedBox(height: 20.0),
+                        Container(
+                          child: TextFormField(
+                            decoration: ThemeHelper().textInputDecoration(
+                                'User name', 'Enter User name'),
                           ),
                           decoration: ThemeHelper().inputBoxDecorationShaddow(),
                         ),
@@ -116,6 +122,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                           decoration: ThemeHelper().inputBoxDecorationShaddow(),
                         ),
                         SizedBox(height: 20.0),
+
                         Container(
                           child: TextFormField(
                             decoration: ThemeHelper().textInputDecoration(

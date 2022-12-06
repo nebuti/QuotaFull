@@ -59,6 +59,8 @@ dependencies:
   cross_scroll: ^0.0.75
   flutter_inset_box_shadow: ^1.0.8
   dropdown_search: ^5.0.3
+  firebase_core: ^2.3.0
+  firebase_auth: ^4.1.5
  
   
 

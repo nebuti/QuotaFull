@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "477337946127",
+    "project_id": "kadesh-f622d",
+    "storage_bucket": "kadesh-f622d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477337946127:android:9e0494d30eb07f52defb7a",
+        "android_client_info": {
+          "package_name": "com.example.mouse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "477337946127-o6ljrdcchh57ld7q7ncov7fmmmhgudpr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD72mfS9cLsfuTNLvEuFYFvCUOdt2CGI6Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "477337946127-o6ljrdcchh57ld7q7ncov7fmmmhgudpr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

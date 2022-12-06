@@ -12,8 +12,19 @@ import 'package:mouse/pages/login_page.dart';
 import 'package:page_transition/page_transition.dart';
 import 'common/car/car.dart';
 import 'common/house/house.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
+  await Firebase.initializeApp(
+    options: FirebaseOptions(
+      storageBucket: "kadesh-f622d.appspot.com",
+      authDomain: "kadesh-f622d.firebaseapp.com",
+      apiKey: "AIzaSyA2O2ESNI_EC-yGF3wTUIdnuemP_zTZk1E",
+      appId: "1:477337946127:web:529a9092b1c8fc41defb7a",
+      messagingSenderId: "477337946127",
+      projectId: "kadesh-f622d",
+    ),
+  );
   SystemChrome.setSystemUIOverlayStyle(
       SystemUiOverlayStyle(statusBarColor: Color.fromARGB(0, 240, 216, 216)));
   runApp(MyApp());
@@ -125,8 +136,8 @@ class _HomeState extends State<Home> {
           title: Container(
               child: Align(
                   alignment: Alignment.topRight,
-                  child: ClipOval( 
-                     child: Material(
+                  child: ClipOval(
+                      child: Material(
                     color: Color.fromARGB(255, 66, 180, 60), // Button color
                     child: InkWell(
                       splashColor: Colors.red, // Splash color
@@ -143,8 +154,6 @@ class _HomeState extends State<Home> {
                           Icons.add,
                         ),
                       ),
-
-                      
                     ),
                   )) // animationCurve: ,
                   ))),
